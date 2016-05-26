@@ -1,0 +1,211 @@
+/*最小解析度與全域設定*/
+
+body {
+	overflow: hidden;
+}
+
+.wrapper > .sidebar.open {
+	left: 0;
+}
+
+.wrapper > .main.open {
+	left: 200px;
+}
+
+.wrapper > .header.open {
+	left: 200px !important;
+}
+
+.wrapper {
+
+	position: absolute;
+	top     : 0;
+	left    : 0;
+	width   : 100%;
+	height  : 100vh;
+	overflow: scroll;
+
+}
+
+.wrapper > .sidebar {
+	position        : absolute;
+	top             : 0;
+	left            : -200px;
+	/*left            : 0px;*/
+	width           : 200px;
+	height          : 100vh;
+	margin-top      : 0;
+	padding-left    : 0;
+	background-color: #ffbf00;
+}
+
+.wrapper > .sidebar > .menuitem {
+	line-height  : 39px;
+	display      : block;
+	width        : 100%;
+	height       : 39px;
+	margin       : 0;
+	text-align   : center;
+	border-bottom: 1px dashed #000;
+}
+
+.wrapper > .sidebar > .menuitem > a {
+	display: block;
+	width  : 100%;
+	height : 100%;
+}
+
+.wrapper > .main {
+	position        : relative;
+	top             : 0;
+	left            : 0;
+	/*overflow        : scroll;*/
+	/*left            : 200px;*/
+	width           : 100%;
+	min-height      : 100%;
+	background-color: #d432e2;
+
+	/*-webkit-overflow-scrolling: touch;*/
+}
+
+.wrapper > .main > .header {
+	font-size       : 20px;
+	position        : fixed;
+	z-index         : 1;
+	width           : 100%;
+	height          : 60px;
+	text-align      : center;
+	background-color: #f00;
+}
+
+.wrapper > .main > .header > .brand {
+	line-height     : 60px;
+	position        : absolute;
+	left            : 0;
+	display         : block;
+	width           : 100%;
+	text-align      : center;
+	background-color: #0f0;
+}
+
+.wrapper > .main > .header > .hamburger {
+	line-height     : 60px;
+	position        : absolute;
+	z-index         : 3;
+	display         : block;
+	width           : 60px;
+	height          : 60px;
+	text-align      : center;
+	background-color: #ff0;
+}
+
+.wrapper > .main > .content {
+	position        : relative;
+	z-index         : 0;
+	width           : 90%;
+	margin-top      : 60px;
+	margin-right    : auto;
+	margin-left     : auto;
+	padding         : 10px;
+	text-align      : justify;
+	background-color: rgba(189, 255, 0, .5);
+}
+
+/* iPhone 4s 橫，大於等於 321px*/
+@media (min-width: 321px) {
+	.wrapper > .main > .logo {
+		background-color: #0f0;
+	}
+}
+
+/* iPad 直，大於等於 481px */
+@media (min-width: 481px) {
+	.wrapper > .main > .logo {
+		background-color: #00f;
+	}
+}
+
+/* iPad 橫，大於等於 769px */
+@media (min-width: 769px) {
+	.wrapper > .sidebar {
+		font-size: 0;
+		position : absolute;
+		z-index  : 10;
+		right    : 0;
+		left     : auto;
+		width    : 400px;
+		height   : 60px;
+	}
+
+	.wrapper > .sidebar > .menuitem {
+		font-size       : 12px;
+		display         : inline-block;
+		width           : 99px;
+		margin-top      : 20px;
+		margin-right    : 1px;
+		list-style      : none;
+		border          : none;
+		background-color: #eee;
+	}
+
+	.wrapper > .main {
+		left: 0;
+	}
+
+	.wrapper > .main > .header > .brand {
+		text-align : left;
+		text-indent: 20px;
+	}
+
+	.wrapper > .main > .header > .hamburger {
+		display: none;
+	}
+}
+
+/* 筆電，大於等於 1024px */
+@media (min-width: 1025px) {
+	.wrapper > .sidebar {
+		position        : absolute;
+		left            : 0;
+		width           : 100%;
+		max-width       : 1170px;
+		margin          : 0 auto;
+		background-color: transparent;
+	}
+
+	.wrapper > .sidebar > .menuitem:nth-child(4) {
+		position: absolute;
+		right   : 0;
+	}
+
+	.wrapper > .sidebar > .menuitem:nth-child(3) {
+		position: absolute;
+		right   : 100px;
+	}
+
+	.wrapper > .sidebar > .menuitem:nth-child(2) {
+		position: absolute;
+		right   : 200px;
+	}
+
+	.wrapper > .sidebar > .menuitem:nth-child(1) {
+		position: absolute;
+		right   : 300px;
+	}
+
+	.wrapper > .main > .header > .brand {
+		position : relative;
+		width    : 100%;
+		max-width: 1170px;
+		margin   : auto;
+	}
+
+	.wrapper > .main > .content {
+		max-width: 1170px;
+		margin   : auto;
+	}
+}
+
+/* 大螢幕，大於等於 1366px */
+@media (min-width: 1367px) {}
+@media (min-width: 1367px) {}
