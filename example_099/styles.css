@@ -26,7 +26,7 @@ body {
 .wrapper > .main {
 	position        : absolute;
 	top             : 0;
-	left            : 200;
+	left            : 200px;
 	/*left            : 0;*/
 	width           : 100%;
 	min-height      : 100%;
@@ -44,12 +44,14 @@ body {
 }
 
 .wrapper > .main > .header > .brand {
-	line-height: 60px;
-	position   : absolute;
-	left       : 0;
-	display    : block;
-	width      : 100%;
-	text-align : center;
+	line-height     : 60px;
+	position        : absolute;
+	left            : 0;
+	display         : block;
+	width           : 100%;
+	text-align      : center;
+	background-color: #0f0;
+
 }
 
 .wrapper > .main > .header > .hamburger {
@@ -86,7 +88,16 @@ body {
 }
 
 /* iPad 橫，大於等於 769px */
-@media (min-width: 769px) {}
+@media (min-width: 769px) {
+	.wrapper > .main > .header > .brand {
+		text-align : left;
+		text-indent: 20px;
+	}
+
+	.wrapper > .main > .header > .hamburger {
+		display: none;
+	}
+}
 
 /* 筆電，大於等於 1024px */
 @media (min-width: 1025px) {}
