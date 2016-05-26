@@ -1,17 +1,95 @@
-div {
-    font-size: 9px;
-    background-color: #65809f;
-    position: absolute;
-    height: 60px;
-    width: 100%;
+/*最小解析度與全域設定*/
+
+body {
+	overflow-x: hidden;
 }
 
+.wrapper > .sidebar {
+	position        : fixed;
+	top             : 0;
+	left            : 0;
+	/*left            : -200px;*/
+	width           : 200px;
+	height          : 100%;
+	background-color: #ffbf00;
+}
+
+.wrapper > .sidebar > .menuitem {
+	line-height: 39px;
+	display    : block;
+	width      : 100%;
+	height     : 39px;
+	text-align : center;
+	border-top : 1px dashed #000;
+}
+
+.wrapper > .main {
+	position        : absolute;
+	top             : 0;
+	left            : 200;
+	/*left            : 0;*/
+	width           : 100%;
+	min-height      : 100%;
+	background-color: #d432e2;
+}
+
+.wrapper > .main > .header {
+	font-size       : 20px;
+	position        : fixed;
+	z-index         : 1;
+	width           : 100%;
+	height          : 60px;
+	text-align      : center;
+	background-color: #f00;
+}
+
+.wrapper > .main > .header > .brand {
+	line-height: 60px;
+	position   : absolute;
+	left       : 0;
+	display    : block;
+	width      : 100%;
+	text-align : center;
+}
+
+.wrapper > .main > .header > .hamburger {
+	line-height     : 60px;
+	position        : absolute;
+	z-index         : 3;
+	display         : block;
+	width           : 60px;
+	height          : 60px;
+	text-align      : center;
+	background-color: #ff0;
+}
+
+.wrapper > .main > .content {
+	position  : relative;
+	z-index   : 0;
+	margin-top: 60px;
+	padding   : 10px;
+	text-align: justify;
+}
+
+/* iPhone 4s 橫，大於等於 321px*/
 @media (min-width: 321px) {
-    div {
-			background-color: #659f80;
-    }
+	.wrapper > .main > .logo {
+		background-color: #0f0;
+	}
 }
 
-@media (min-width: 481px) {}
+/* iPad 直，大於等於 481px */
+@media (min-width: 481px) {
+	.wrapper > .main > .logo {
+		background-color: #00f;
+	}
+}
 
+/* iPad 橫，大於等於 769px */
 @media (min-width: 769px) {}
+
+/* 筆電，大於等於 1024px */
+@media (min-width: 1025px) {}
+
+/* 大螢幕，大於等於 1366px */
+@media (min-width: 1367px) {}
