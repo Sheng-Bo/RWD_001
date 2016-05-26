@@ -1,0 +1,17 @@
+div {
+    font-size: 9px;
+    background-color: #65809f;
+    position: absolute;
+    height: 60px;
+    width: 100%;
+}
+
+@media (min-width: 321px) {
+    div {
+			background-color: #659f80;
+    }
+}
+
+@media (min-width: 481px) {}
+
+@media (min-width: 769px) {}
