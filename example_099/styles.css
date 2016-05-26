@@ -12,15 +12,26 @@ body {
 	width           : 200px;
 	height          : 100%;
 	background-color: #ffbf00;
+	margin-top      : 0;
+	padding-left    : 0;
+
 }
 
 .wrapper > .sidebar > .menuitem {
-	line-height: 39px;
-	display    : block;
-	width      : 100%;
-	height     : 39px;
-	text-align : center;
-	border-top : 1px dashed #000;
+	line-height  : 39px;
+	display      : block;
+	width        : 100%;
+	height       : 39px;
+	text-align   : center;
+	border-bottom: 1px dashed #000;
+	margin       : 0;
+
+}
+
+.wrapper > .sidebar > .menuitem > a {
+	display: block;
+	width  : 100%;
+	height : 100%;
 }
 
 .wrapper > .main {
@@ -89,6 +100,8 @@ body {
 
 /* iPad 橫，大於等於 769px */
 @media (min-width: 769px) {
+	.wrapper > .sidebar {}
+
 	.wrapper > .main > .header > .brand {
 		text-align : left;
 		text-indent: 20px;
@@ -104,3 +117,5 @@ body {
 
 /* 大螢幕，大於等於 1366px */
 @media (min-width: 1367px) {}
+
+px) {}
