@@ -4,11 +4,19 @@ body {
 	overflow-x: hidden;
 }
 
+.wrapper > .sidebar.open {
+	left: 0;
+}
+
+.wrapper > .main.open {
+	left: 200px;
+}
+
 .wrapper > .sidebar {
 	position        : fixed;
 	top             : 0;
-	left            : 0;
-	/*left            : -200px;*/
+	left            : -200px;
+	/*left            : 0px;*/
 	width           : 200px;
 	height          : 100%;
 	margin-top      : 0;
@@ -35,8 +43,8 @@ body {
 .wrapper > .main {
 	position        : absolute;
 	top             : 0;
-	left            : 200px;
-	/*left            : 0;*/
+	left            : 0;
+	/*left            : 200px;*/
 	width           : 100%;
 	min-height      : 100%;
 	background-color: #d432e2;
@@ -133,7 +141,48 @@ body {
 }
 
 /* 筆電，大於等於 1024px */
-@media (min-width: 1025px) {}
+@media (min-width: 1025px) {
+	.wrapper > .sidebar {
+		position        : fixed;
+		left            : 0;
+		width           : 100%;
+		max-width       : 1170px;
+		margin          : 0 auto;
+		background-color: transparent;
+	}
+
+	.wrapper > .sidebar > .menuitem:nth-child(4) {
+		position: absolute;
+		right   : 0;
+	}
+
+	.wrapper > .sidebar > .menuitem:nth-child(3) {
+		position: absolute;
+		right   : 100px;
+	}
+
+	.wrapper > .sidebar > .menuitem:nth-child(2) {
+		position: absolute;
+		right   : 200px;
+	}
+
+	.wrapper > .sidebar > .menuitem:nth-child(1) {
+		position: absolute;
+		right   : 300px;
+	}
+
+	.wrapper > .main > .header > .brand {
+		position : relative;
+		width    : 100%;
+		max-width: 1170px;
+		margin   : auto;
+	}
+
+	.wrapper > .main > .content {
+		max-width: 1170px;
+		margin   : auto;
+	}
+}
 
 /* 大螢幕，大於等於 1366px */
 @media (min-width: 1367px) {}
