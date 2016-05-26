@@ -1,1 +1,60 @@
-Error: Source sample is missing.
+body {
+
+	overflow: hidden;
+
+}
+
+.sidebar {
+	position        : fixed;
+	top             : 0;
+	left            : 0;
+	width           : 200px;
+	height          : 100vh;
+	background-color: #f00;
+	margin-top      : 0;
+	padding-left    : 0;
+}
+
+.header {
+	position        : fixed;
+	top             : 0;
+	left            : 200px;
+	width           : 100vw;
+	height          : 60px;
+	background-color: #bdff00;
+}
+
+.main {
+	position                  : fixed;
+	top                       : 0;
+	left                      : 200px;
+	overflow-x                : hidden;
+	overflow-y                : auto;
+	width                     : 100vw;
+	height                    : 100vh;
+	background-color          : #00f;
+	-webkit-overflow-scrolling: touch;
+	margin-top                : 60px;
+}
+
+.main > .content {
+	top             : 0;
+	left            : 200px;
+	width           : 100vw;
+	background-color: #0f0;
+}
+
+/* iPhone 4s 橫，大於等於 321px*/
+@media (min-width: 321px) {}
+
+/* iPad 直，大於等於 481px */
+@media (min-width: 481px) {}
+
+/* iPad 橫，大於等於 769px */
+@media (min-width: 769px) {}
+
+/* 筆電，大於等於 1024px */
+@media (min-width: 1025px) {}
+
+/* 大螢幕，大於等於 1366px */
+@media (min-width: 1367px) {}
