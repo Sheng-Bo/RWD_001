@@ -4,26 +4,25 @@ $(function () {
 
 		var viewport_width = $(window).width();
 
-		if (viewport_width < 1025) {
+		if (viewport_width < 769) {
 			$('.hamburger').unbind('click').click(function () {
 				$('.sidebar').toggleClass('open');
 				$('.main').toggleClass('open');
-				$('.main > .header').toggleClass('open');
+				$('.header').toggleClass('open');
 			});
 		} // end if
 
-		if (viewport_width >= 1025) {
+		if (viewport_width >= 769) {
 			$('.sidebar').removeClass('open');
 			$('.main').removeClass('open');
-			$('.main > .header').removeClass('open');
+			$('.header').removeClass('open');
 		} // end if
 	} // end function
 
 	toggle_sidebar();
 
-	$(window)
-		.resize(function () {
-			toggle_sidebar();
-		});
+	$(window).resize(function () {
+		toggle_sidebar();
+	});
 
 });

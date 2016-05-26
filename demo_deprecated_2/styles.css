@@ -1,3 +1,7 @@
+body {
+	overflow: hidden;
+}
+
 .sidebar.open {
 	left: 0;
 }
@@ -6,7 +10,7 @@
 	left: 200px;
 }
 
-.header.open {
+.main > .header.open {
 	left: 200px;
 }
 
@@ -29,6 +33,18 @@
 	margin       : 0;
 	text-align   : center;
 	border-bottom: 1px dashed #000;
+}
+
+.main {
+	position                  : fixed;
+	top                       : 0;
+	left                      : 0;
+	overflow-x                : hidden;
+	overflow-y                : auto;
+	width                     : 100vw;
+	height                    : 100vh;
+	background-color          : #00f;
+	-webkit-overflow-scrolling: touch;
 }
 
 .header {
@@ -63,23 +79,11 @@
 	text-align : center;
 }
 
-.main {
-	position                  : fixed;
-	top                       : 0;
-	left                      : 0;
-	overflow-x                : hidden;
-	overflow-y                : auto;
-	width                     : 100vw;
-	height                    : 100vh;
-	background-color          : #00f;
-	-webkit-overflow-scrolling: touch;
-	margin-top                : 60px;
-}
-
 .main > .content {
 	top             : 0;
 	left            : 200px;
 	width           : 100vw;
+	margin-top      : 60px;
 	background-color: #0f0;
 }
 
@@ -124,49 +128,7 @@
 }
 
 /* 筆電，大於等於 1024px */
-@media (min-width: 1025px) {
-	.sidebar {
-		position        : absolute;
-		left            : 0;
-		width           : 100%;
-		max-width       : 1170px;
-		margin          : 0 auto;
-		background-color: transparent;
-	}
-
-	.sidebar > .menuitem:nth-child(4) {
-		position: absolute;
-		right   : 0;
-	}
-
-	.sidebar > .menuitem:nth-child(3) {
-		position: absolute;
-		right   : 100px;
-	}
-
-	.sidebar > .menuitem:nth-child(2) {
-		position: absolute;
-		right   : 200px;
-	}
-
-	.sidebar > .menuitem:nth-child(1) {
-		position: absolute;
-		right   : 300px;
-	}
-
-	.header > .brand {
-		position : relative;
-		width    : 100%;
-		max-width: 1170px;
-		margin   : auto;
-	}
-
-	.main > .content {
-		max-width: 1170px;
-		margin   : auto;
-	}
-
-}
+@media (min-width: 1025px) {}
 
 /* 大螢幕，大於等於 1366px */
 @media (min-width: 1367px) {}
